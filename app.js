@@ -4,7 +4,7 @@ const cors = require("cors");
 const user = require("./routes/user");
 const app = express();
 
-app.use(cors());
+app.use(cors({origin:*}));
 app.use("/api", auth);
 app.use("/api", user);
 app.use("*", (req, res) => {
